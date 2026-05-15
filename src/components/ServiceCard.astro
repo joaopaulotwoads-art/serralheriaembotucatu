@@ -1,0 +1,50 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  title: string;
+  slug: string;
+  imageSrc: ImageMetadata;
+  alt: string;
+  index?: number;
+}
+
+const { title, slug, imageSrc, alt, index = 0 } = Astro.props;
+---
+
+<article
+  class="group bg-white rounded-2xl overflow-hidden shadow-lg card-hover border border-gray-100"
+  style={`animation-delay: ${index * 0.08}s`}
+>
+  <!-- Image -->
+  <div class="relative overflow-hidden aspect-[4/3]">
+    <Image
+      src={imageSrc}
+      alt={alt}
+      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+      widths={[320, 480, 640]}
+      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+      loading="lazy"
+      format="webp"
+      quality={75}
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="p-5">
+    <h2 class="text-lg font-bold text-gray-800 mb-3 group-hover:text-brand-600 transition-colors duration-300">
+      {title}
+    </h2>
+    <a
+      href={`/${slug}/`}
+      class="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-600 text-white text-sm font-semibold rounded-lg hover:bg-brand-700 focus:outline-none focus:ring-4 focus:ring-brand-300 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-brand-600/25"
+      aria-label={`Saiba mais sobre ${title} em Bauru`}
+    >
+      Saiba Mais
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+      </svg>
+    </a>
+  </div>
+</article>

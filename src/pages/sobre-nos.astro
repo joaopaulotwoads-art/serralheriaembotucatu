@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import AboutSection from '../components/AboutSection.astro';
+import { Image } from 'astro:assets';
+import aboutImg from '../assets/images/about-welder.png';
+import '../styles/global.css';
+---
+
+<Layout
+  title="Sobre Nós - Serralheria em Bauru e Região - Serviço de Serralheiro"
+  description="Bem-vindo à Serralheria em Bauru, onde transformamos suas ideias em realidade com mais de 15 anos de experiência no mercado."
+  canonical="https://serralheriaembauru.com.br/sobre-nos/"
+>
+  <Header />
+
+  <main id="main-content" class="pt-20">
+    <!-- Hero Banner -->
+    <section class="relative py-20 lg:py-28 bg-gray-900 overflow-hidden">
+      <div class="absolute inset-0 opacity-20">
+        <Image
+          src={aboutImg}
+          alt="Profissional de serralheria soldando"
+          class="w-full h-full object-cover"
+          widths={[640, 960, 1280]}
+          sizes="100vw"
+          loading="eager"
+          format="webp"
+          quality={60}
+        />
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/95 to-gray-900/80"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <!-- Breadcrumb -->
+        <nav class="flex justify-center mb-8" aria-label="Breadcrumb">
+          <ol class="flex items-center gap-2 text-sm text-gray-400">
+            <li><a href="/" class="hover:text-brand-400 transition-colors">Home</a></li>
+            <li><span class="mx-1">/</span></li>
+            <li class="text-brand-400 font-medium">Sobre Nós</li>
+          </ol>
+        </nav>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6 animate-fade-in-up">
+          SOBRE NÓS
+        </h1>
+        <p class="text-xl text-brand-300 font-medium mb-2 animate-fade-in-up" style="animation-delay: 0.1s">
+          Serralheria em Bauru e Região
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="py-10">
+      <AboutSection />
+    </div>
+
+  </main>
+
+  <Footer />
+  <WhatsAppButton />
+</Layout>

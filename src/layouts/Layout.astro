@@ -1,0 +1,110 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+}
+
+const {
+  title = 'Serralheria em Bauru | Portões, Grades e Estruturas Metálicas - Serralheria Bauru',
+  description = 'Serralheria em Bauru SP - Fabricação e instalação de portões, grades, coberturas metálicas, pergolados e estruturas de ferro. Orçamento grátis! Qualidade e preço justo.',
+  canonical = 'https://serralheriambauru.com.br',
+  ogImage = '/og-image.jpg',
+} = Astro.props;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Serralheria Bauru',
+  description: 'Serralheria em Bauru SP - Fabricação e instalação de portões, grades, coberturas metálicas, pergolados e estruturas metálicas.',
+  url: 'https://serralheriambauru.com.br',
+  telephone: '+55-14-99680-4609',
+  email: 'contato@serralheriambauru.com.br',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Rua Exemplo, 123',
+    addressLocality: 'Bauru',
+    addressRegion: 'SP',
+    postalCode: '17000-000',
+    addressCountry: 'BR',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: -22.3246,
+    longitude: -49.0871,
+  },
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    opens: '08:00',
+    closes: '18:00',
+  },
+  priceRange: '$$',
+  image: 'https://serralheriambauru.com.br/og-image.jpg',
+  sameAs: ['https://www.instagram.com/serralheriaembauru/'],
+  areaServed: {
+    '@type': 'City',
+    name: 'Bauru',
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Serviços de Serralheria',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Portões de Ferro' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Cobertura Metálica' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Grades e Cercas' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Manutenção de Serralheria' } },
+    ],
+  },
+};
+---
+
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- SEO -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Serralheria Bauru" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Serralheria Bauru" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#2553EB" />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    <slot />
+  </body>
+</html>

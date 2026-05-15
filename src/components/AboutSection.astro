@@ -1,0 +1,71 @@
+---
+import { Image } from 'astro:assets';
+import aboutImg from '../assets/images/about-welder.png';
+---
+
+<section id="sobre" class="py-20 lg:py-28 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <!-- Text Content -->
+      <div class="order-2 lg:order-1">
+        <span class="inline-block px-4 py-1.5 bg-brand-100 text-brand-700 text-sm font-semibold rounded-full mb-4">
+          Quem Somos
+        </span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 leading-tight">
+          Sobre <span class="text-brand-600">Serralheria Bauru</span>
+        </h2>
+
+        <div class="space-y-4 text-gray-600 leading-relaxed text-lg">
+          <p>
+            Com mais de 15 anos de experiência no mercado, nossa serralheria em Bauru possui todo o conhecimento 
+            e mão de obra qualificada que sua obra necessita.
+          </p>
+          <p>
+            Cuidamos da instalação e montagem no local de produtos em ferro, alumínio ou aço inox.
+          </p>
+          <p>
+            Atendemos projetos de edifícios, imóveis privados, áreas comuns, projetos públicos e hotéis.
+            Seja para <strong class="text-gray-800">fabricação, reforma ou manutenção</strong>, 
+            você pode contar com nossa equipe.
+          </p>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-3 gap-6 mt-10 pt-10 border-t border-gray-200">
+          <div class="text-center">
+            <div class="text-3xl font-extrabold text-brand-600">15+</div>
+            <div class="text-sm text-gray-500 mt-1 font-medium">Anos de Experiência</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-extrabold text-brand-600">500+</div>
+            <div class="text-sm text-gray-500 mt-1 font-medium">Projetos Entregues</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-extrabold text-brand-600">100%</div>
+            <div class="text-sm text-gray-500 mt-1 font-medium">Satisfação</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="order-1 lg:order-2 relative">
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+          <Image
+            src={aboutImg}
+            alt="Profissional de serralheria em Bauru SP realizando trabalho de soldagem"
+            class="w-full h-auto object-cover"
+            widths={[480, 640, 800]}
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            loading="lazy"
+            format="webp"
+            quality={80}
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-900/30 to-transparent"></div>
+        </div>
+        <!-- Decorative elements -->
+        <div class="absolute -bottom-4 -left-4 w-24 h-24 bg-brand-600/10 rounded-2xl -z-10"></div>
+        <div class="absolute -top-4 -right-4 w-32 h-32 bg-brand-600/10 rounded-2xl -z-10"></div>
+      </div>
+    </div>
+  </div>
+</section>
