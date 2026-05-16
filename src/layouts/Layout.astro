@@ -1,4 +1,6 @@
 ---
+import { SITE_MAPS_URL, SITE_STREET } from '../data/site';
+
 export interface Props {
   title?: string;
   description?: string;
@@ -6,35 +8,37 @@ export interface Props {
   ogImage?: string;
 }
 
+const siteOrigin = import.meta.env.SITE ?? 'https://serralheriaembotucatu.com.br';
+
 const {
-  title = 'Serralheria em Bauru | Portões, Grades e Estruturas Metálicas',
+  title = 'Serralheria em Botucatu | Portões, Grades e Estruturas Metálicas',
   description =
-    'Em Bauru SP: portões, grades, coberturas e estruturas metálicas. Fabricação e instalação. Orçamento grátis.',
-  canonical = 'https://serralheriambauru.com.br',
-  ogImage = '/og-image.jpg',
+    'Em Botucatu SP: portões, grades, coberturas e estruturas metálicas. Fabricação e instalação. Orçamento grátis.',
+  canonical = 'https://serralheriaembotucatu.com.br',
+  ogImage = '/og-image.png',
 } = Astro.props;
+
+const absoluteOgImage = ogImage.startsWith('http')
+  ? ogImage
+  : new URL(ogImage.replace(/^\//, ''), `${siteOrigin}/`).href;
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'Serralheria Bauru',
-  description: 'Serralheria em Bauru SP - Fabricação e instalação de portões, grades, coberturas metálicas, pergolados e estruturas metálicas.',
-  url: 'https://serralheriambauru.com.br',
-  telephone: '+55-14-99680-4609',
-  email: 'contato@serralheriambauru.com.br',
+  name: 'Serralheria Botucatu',
+  description:
+    'Serralheria em Botucatu SP - Fabricação e instalação de portões, grades, coberturas metálicas, pergolados e estruturas metálicas.',
+  url: 'https://serralheriaembotucatu.com.br',
+  telephone: '+55-14-98165-1674',
+  email: 'contato@serralheriaembotucatu.com.br',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Rua Exemplo, 123',
-    addressLocality: 'Bauru',
+    streetAddress: SITE_STREET,
+    addressLocality: 'Botucatu',
     addressRegion: 'SP',
-    postalCode: '17000-000',
     addressCountry: 'BR',
   },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: -22.3246,
-    longitude: -49.0871,
-  },
+  hasMap: SITE_MAPS_URL,
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
@@ -42,11 +46,11 @@ const jsonLd = {
     closes: '18:00',
   },
   priceRange: '$$',
-  image: 'https://serralheriambauru.com.br/og-image.jpg',
-  sameAs: ['https://www.instagram.com/serralheriaembauru/'],
+  image: absoluteOgImage,
+  sameAs: ['https://www.instagram.com/serralheriaembotucatu/'],
   areaServed: {
     '@type': 'City',
-    name: 'Bauru',
+    name: 'Botucatu',
   },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
@@ -62,7 +66,7 @@ const jsonLd = {
 ---
 
 <!doctype html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR" class="scroll-smooth selection:bg-brand-200 selection:text-brand-900">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -73,24 +77,25 @@ const jsonLd = {
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <meta name="robots" content="index, follow" />
-    <meta name="author" content="Serralheria Bauru" />
+    <meta name="author" content="Serralheria Botucatu" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content={ogImage} />
+    <meta property="og:image" content={absoluteOgImage} />
     <meta property="og:locale" content="pt_BR" />
-    <meta property="og:site_name" content="Serralheria Bauru" />
+    <meta property="og:site_name" content="Serralheria Botucatu" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image" content={absoluteOgImage} />
 
     <!-- Favicon -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 
@@ -102,9 +107,9 @@ const jsonLd = {
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
     <!-- Theme Color -->
-    <meta name="theme-color" content="#2553EB" />
+    <meta name="theme-color" content="#b45309" />
   </head>
-  <body class="min-h-screen flex flex-col">
+  <body class="min-h-screen flex flex-col font-sans text-base">
     <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
     <slot />
   </body>

@@ -1,10 +1,9 @@
 ---
-import { Image } from 'astro:assets';
-import logoImg from '../assets/images/logo.png';
+import Logo from './Logo.astro';
+
 const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'Serviços', href: '/#servicos' },
-  { label: 'Blog', href: '/blog' },
   { label: 'Sobre Nós', href: '/sobre-nos/' },
   { label: 'Contato', href: '/contato/' },
 ];
@@ -12,20 +11,13 @@ const navLinks = [
 
 <header
   id="header"
-  class="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-md border-b border-gray-800 transition-all duration-300"
+  class="fixed top-0 left-0 right-0 z-50 bg-steel-925/90 backdrop-blur-lg border-b border-white/[0.06] transition-all duration-300 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.04)]"
 >
   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Navegação principal">
     <div class="flex items-center justify-between h-16 lg:h-20">
       <!-- Logo -->
-      <a href="/" class="flex items-center gap-3 group" aria-label="Serralheria Bauru - Página Inicial">
-        <Image 
-          src={logoImg} 
-          alt="Serralheria Bauru Logo" 
-          class="h-12 w-auto object-contain"
-          width={500}
-          height={143}
-          loading="eager"
-        />
+      <a href="/" class="group" aria-label="Serralheria Botucatu - Página Inicial">
+        <Logo variant="header" class="group-hover:opacity-95 transition-opacity" />
       </a>
 
       <!-- Desktop Nav -->
@@ -33,7 +25,7 @@ const navLinks = [
         {navLinks.map((link) => (
           <a
             href={link.href}
-            class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200"
+            class="font-display px-4 py-2 text-[13px] font-semibold uppercase tracking-wider text-zinc-400 hover:text-white hover:bg-white/[0.07] rounded-md transition-all duration-200"
           >
             {link.label}
           </a>
@@ -43,11 +35,11 @@ const navLinks = [
       <!-- CTA + Mobile Menu -->
       <div class="flex items-center gap-3">
         <a
-          href="https://wa.me/5514996804609?text=Ol%C3%A1!%20Encontrei%20o%20contato%20de%20voc%C3%AAs%20atrav%C3%A9s%20do%20site%20serralheriaembauru.com.br%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento"
+          href="https://wa.me/5514981651674?text=Ol%C3%A1!%20Encontrei%20o%20contato%20de%20voc%C3%AAs%20atrav%C3%A9s%20do%20site%20serralheriaembotucatu.com.br%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento"
           target="_blank"
           rel="noopener noreferrer"
-          class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-brand-600 text-white text-sm font-semibold rounded-lg hover:bg-brand-500 focus:outline-none focus:ring-4 focus:ring-brand-300/50 transition-all duration-300 hover:shadow-lg hover:shadow-brand-600/25"
-          aria-label="Solicitar orçamento gratuito de serralheria em Bauru"
+          class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-brand-600 to-brand-700 text-white text-xs font-display font-semibold uppercase tracking-wider rounded-md hover:from-brand-500 hover:to-brand-600 focus:outline-none focus:ring-4 focus:ring-brand-400/35 transition-all duration-300 shadow-industrial-sm hover:shadow-spark hover:-translate-y-0.5"
+          aria-label="Solicitar orçamento gratuito de serralheria em Botucatu"
         >
           <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
@@ -84,16 +76,16 @@ const navLinks = [
         {navLinks.map((link) => (
           <a
             href={link.href}
-            class="mobile-nav-link px-4 py-3 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200 font-medium"
+            class="mobile-nav-link px-4 py-3 font-display text-sm font-semibold uppercase tracking-wide text-zinc-400 hover:text-white hover:bg-white/[0.07] rounded-md transition-all duration-200"
           >
             {link.label}
           </a>
         ))}
         <a
-          href="https://wa.me/5514996804609?text=Ol%C3%A1!%20Encontrei%20o%20contato%20de%20voc%C3%AAs%20atrav%C3%A9s%20do%20site%20serralheriaembauru.com.br%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento"
+          href="https://wa.me/5514981651674?text=Ol%C3%A1!%20Encontrei%20o%20contato%20de%20voc%C3%AAs%20atrav%C3%A9s%20do%20site%20serralheriaembotucatu.com.br%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento"
           target="_blank"
           rel="noopener noreferrer"
-          class="mobile-nav-link mt-2 mx-4 px-5 py-3 bg-brand-600 text-white text-center font-semibold rounded-lg hover:bg-brand-500 transition-all duration-300"
+          class="mobile-nav-link mt-2 mx-4 px-5 py-3.5 bg-gradient-to-r from-brand-600 to-brand-700 text-white text-center font-display font-semibold uppercase tracking-wider text-sm rounded-md hover:from-brand-500 hover:to-brand-600 transition-all duration-300 shadow-industrial-sm"
           aria-label="Solicitar orçamento gratuito"
         >
           Solicitar Orçamento

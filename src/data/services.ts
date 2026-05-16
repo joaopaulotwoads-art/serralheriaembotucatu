@@ -20,11 +20,11 @@ export const services: Service[] = [
   {
     id: 1,
     title: 'Cerca Concertina',
-    pageTitle: 'Cerca Concertina em Bauru - SP Orçamento',
+    pageTitle: 'Cerca Concertina em Botucatu - SP Orçamento',
     slug: 'cerca-concertina',
     image: 'cobertura-metalica',
-    alt: 'Cerca concertina em Bauru SP - Fabricação e instalação',
-    metaDescription: 'Cerca concertina em Bauru - SP. Fabricação e instalação de cerca concertina em Bauru e região. Solicite um orçamento gratuito!',
+    alt: 'Cerca concertina em Botucatu SP - Fabricação e instalação',
+    metaDescription: 'Cerca concertina em Botucatu - SP. Fabricação e instalação de cerca concertina em Botucatu e região. Solicite um orçamento gratuito!',
     intro: 'A cerca concertina é reconhecida por sua eficácia em cercar áreas com segurança máxima. Feita de aço com lâminas afiadas, ela forma uma barreira quase intransponível, evitando invasões e garantindo a tranquilidade que você merece.',
     sections: [
       {
@@ -49,11 +49,11 @@ export const services: Service[] = [
   {
     id: 2,
     title: 'Fabricação de Grade',
-    pageTitle: 'Fabricação de Grade em Bauru - SP',
+    pageTitle: 'Fabricação de Grade em Botucatu - SP',
     slug: 'fabricacao-de-grade',
     image: 'manutencao-de-grades',
-    alt: 'Fabricação de grade em Bauru SP - Serralheria',
-    metaDescription: 'Fabricação de grade em Bauru SP. Grades de ferro e aço sob medida para residências e comércios. Orçamento gratuito!',
+    alt: 'Fabricação de grade em Botucatu SP - Serralheria',
+    metaDescription: 'Fabricação de grade em Botucatu SP. Grades de ferro e aço sob medida para residências e comércios. Orçamento gratuito!',
     intro: 'As grades são elementos essenciais para a segurança de qualquer imóvel. Fabricamos grades de ferro e aço sob medida, com designs modernos e acabamentos impecáveis que combinam proteção e estética.',
     sections: [
       {
@@ -78,11 +78,11 @@ export const services: Service[] = [
   {
     id: 3,
     title: 'Fabricação de Portão',
-    pageTitle: 'Fabricação de Portão em Bauru',
+    pageTitle: 'Fabricação de Portão em Botucatu',
     slug: 'fabricacao-de-portao',
     image: 'portoes-de-ferro',
-    alt: 'Fabricação de portão em Bauru SP - Serralheria',
-    metaDescription: 'Fabricação de portão em Bauru. Portões de ferro, aço e alumínio sob medida. Deslizante, basculante, pivotante e eletrônico. Orçamento grátis!',
+    alt: 'Fabricação de portão em Botucatu SP - Serralheria',
+    metaDescription: 'Fabricação de portão em Botucatu. Portões de ferro, aço e alumínio sob medida. Deslizante, basculante, pivotante e eletrônico. Orçamento grátis!',
     intro: 'Portões são essenciais para assegurar a privacidade e a proteção do seu espaço. Além de funcionais, eles podem transformar a fachada da sua propriedade, adicionando um toque especial ao seu ambiente com designs modernos e acabamentos impecáveis.',
     sections: [
       {
@@ -107,11 +107,11 @@ export const services: Service[] = [
   {
     id: 4,
     title: 'Fabricação de Tela',
-    pageTitle: 'Fabricação de Tela em Bauru SP',
+    pageTitle: 'Fabricação de Tela em Botucatu SP',
     slug: 'fabricacao-de-tela',
     image: 'fabricacao-de-tela',
-    alt: 'Fabricação de tela em Bauru SP - Telas de aço e proteção',
-    metaDescription: 'Fabricação de tela em Bauru SP. Fabricação e instalação de telas em toda região. Solicite um orçamento gratuito agora!',
+    alt: 'Fabricação de tela em Botucatu SP - Telas de aço e proteção',
+    metaDescription: 'Fabricação de tela em Botucatu SP. Fabricação e instalação de telas em toda região. Solicite um orçamento gratuito agora!',
     intro: 'As telas de aço são essenciais para garantir a segurança e a resistência das suas instalações. Além de protegerem contra invasões, elas oferecem suporte estrutural e podem ser usadas em diversas aplicações, desde cercas e janelas até viveiros e lajes, garantindo versatilidade e robustez.',
     sections: [
       {
@@ -136,11 +136,11 @@ export const services: Service[] = [
   {
     id: 5,
     title: 'Manutenção e Reforma',
-    pageTitle: 'Manutenção e Reforma - Serralheria em Bauru',
+    pageTitle: 'Manutenção e Reforma - Serralheria em Botucatu',
     slug: 'manutencao-e-reforma',
     image: 'manutencao-de-serralheria',
-    alt: 'Manutenção e reforma de serralheria em Bauru SP',
-    metaDescription: 'Manutenção e reforma de estruturas metálicas em Bauru. Reparo de portões, grades, cercas e corrimãos. Orçamento gratuito!',
+    alt: 'Manutenção e reforma de serralheria em Botucatu SP',
+    metaDescription: 'Manutenção e reforma de estruturas metálicas em Botucatu. Reparo de portões, grades, cercas e corrimãos. Orçamento gratuito!',
     intro: 'Realizar a manutenção regular de estruturas metálicas previne danos maiores, economiza em reparos futuros e prolonga a vida útil dos produtos.',
     sections: [
       {
@@ -164,11 +164,11 @@ export const services: Service[] = [
   {
     id: 6,
     title: 'Motor para Portão Eletrônico Automático',
-    pageTitle: 'Motor para Portão Eletrônico Automático em Bauru',
+    pageTitle: 'Motor para Portão Eletrônico Automático em Botucatu',
     slug: 'motor-para-portao-eletronico-automatico',
     image: 'corte-e-dobra',
-    alt: 'Motor para portão eletrônico automático em Bauru SP',
-    metaDescription: 'Instalação de motor para portão eletrônico automático em Bauru. Automatize seu portão com segurança e praticidade. Orçamento grátis!',
+    alt: 'Motor para portão eletrônico automático em Botucatu SP',
+    metaDescription: 'Instalação de motor para portão eletrônico automático em Botucatu. Automatize seu portão com segurança e praticidade. Orçamento grátis!',
     intro: 'A automatização de portões com motores eletrônicos oferece conveniência, segurança e valorização do seu imóvel. Instalamos e fazemos manutenção de motores para todos os tipos de portão.',
     sections: [
       {
@@ -193,11 +193,11 @@ export const services: Service[] = [
   {
     id: 7,
     title: 'Portão de Aço',
-    pageTitle: 'Portão de Aço em Bauru - SP',
+    pageTitle: 'Portão de Aço em Botucatu - SP',
     slug: 'porta-de-aco',
     image: 'portao-em-aco',
-    alt: 'Portão de aço galvanizado em Bauru SP',
-    metaDescription: 'Portão de aço em Bauru SP. Fabricação e instalação de portões de aço resistentes. Orçamento gratuito!',
+    alt: 'Portão de aço galvanizado em Botucatu SP',
+    metaDescription: 'Portão de aço em Botucatu SP. Fabricação e instalação de portões de aço resistentes. Orçamento gratuito!',
     intro: 'Os portões de aço são reconhecidos por sua resistência e durabilidade superiores. Ideais para quem busca segurança máxima sem abrir mão da estética, nossos portões de aço são fabricados com materiais de primeira linha.',
     sections: [
       {
@@ -221,11 +221,11 @@ export const services: Service[] = [
   {
     id: 8,
     title: 'Portão Basculante',
-    pageTitle: 'Portão Basculante em Bauru',
+    pageTitle: 'Portão Basculante em Botucatu',
     slug: 'portao-basculante',
     image: 'portoes-basculante',
-    alt: 'Portão basculante para garagem em Bauru SP',
-    metaDescription: 'Onde comprar portão basculante em Bauru-SP? Nós da Serralheria Bauru temos as melhores opções de portão basculante para garagem. Orçamento Gratuito!',
+    alt: 'Portão basculante para garagem em Botucatu SP',
+    metaDescription: 'Onde comprar portão basculante em Botucatu-SP? Nós da Serralheria Botucatu temos as melhores opções de portão basculante para garagem. Orçamento Gratuito!',
     intro: 'O design basculante é conhecido por sua capacidade de maximizar o espaço e garantir uma operação suave e segura. Com diversas opções de materiais, como alumínio, aço e madeira, os portões basculantes podem ser personalizados para atender ao estilo e às necessidades de cada cliente.',
     sections: [
       {
@@ -249,11 +249,11 @@ export const services: Service[] = [
   {
     id: 9,
     title: 'Portão Deslizante',
-    pageTitle: 'Portão Deslizante Bauru',
+    pageTitle: 'Portão Deslizante Botucatu',
     slug: 'portao-deslizante',
     image: 'portoes-deslizante',
-    alt: 'Portão deslizante em Bauru SP - Fabricação e instalação',
-    metaDescription: 'Portão deslizante em Bauru é com a nossa Serralheria. Fabricação e instalação de portão de correr. Fale conosco e solicite um orçamento!',
+    alt: 'Portão deslizante em Botucatu SP - Fabricação e instalação',
+    metaDescription: 'Portão deslizante em Botucatu é com a nossa Serralheria. Fabricação e instalação de portão de correr. Fale conosco e solicite um orçamento!',
     intro: 'Os portões deslizantes são a escolha perfeita para quem deseja aliar segurança, praticidade e estética. O design deslizante otimiza o espaço disponível e permite um acesso fácil e seguro à sua propriedade. Com várias opções de materiais como ferro, alumínio e madeira, nossos portões podem ser personalizados para se adequar ao estilo e às necessidades de cada cliente.',
     sections: [
       {
@@ -266,18 +266,18 @@ export const services: Service[] = [
       },
       {
         title: 'Vantagens de Escolher Nossa Serralheria',
-        text: 'Nossa equipe de especialistas em Bauru possui vasta experiência na fabricação e instalação de portões deslizantes. Garantimos um serviço de alta qualidade, desde o planejamento até a execução, com atenção aos mínimos detalhes. Utilizamos materiais de primeira linha para assegurar durabilidade e funcionalidade, sempre com um acabamento impecável.',
+        text: 'Nossa equipe de especialistas em Botucatu possui vasta experiência na fabricação e instalação de portões deslizantes. Garantimos um serviço de alta qualidade, desde o planejamento até a execução, com atenção aos mínimos detalhes. Utilizamos materiais de primeira linha para assegurar durabilidade e funcionalidade, sempre com um acabamento impecável.',
       },
     ],
   },
   {
     id: 10,
     title: 'Portão Deslizante em L',
-    pageTitle: 'Portão Deslizante em L Bauru SP',
-    slug: 'portao-deslizante-em-l-em-bauru',
+    pageTitle: 'Portão Deslizante em L Botucatu SP',
+    slug: 'portao-deslizante-em-l-em-botucatu',
     image: 'portoes-gradil',
-    alt: 'Portão deslizante em L em Bauru SP',
-    metaDescription: 'Portão deslizante em L em Bauru SP. Fabricação sob medida com materiais de alta qualidade. Solicite seu orçamento gratuito!',
+    alt: 'Portão deslizante em L em Botucatu SP',
+    metaDescription: 'Portão deslizante em L em Botucatu SP. Fabricação sob medida com materiais de alta qualidade. Solicite seu orçamento gratuito!',
     intro: 'Os portões deslizantes em L são projetados para maximizar o uso do espaço disponível, garantindo uma abertura suave e silenciosa, sem comprometer a área útil do seu imóvel.',
     sections: [
       {
@@ -290,18 +290,18 @@ export const services: Service[] = [
       },
       {
         title: 'Por Que Escolher Nossa Serralheria?',
-        text: 'Nossa equipe em Bauru é composta por profissionais altamente qualificados, com anos de experiência na indústria, garantindo que cada portão seja fabricado e instalado com precisão e atenção aos detalhes. Utilizamos apenas materiais de alta qualidade, assegurando que nossos portões ofereçam não apenas estética, mas também segurança e durabilidade.',
+        text: 'Nossa equipe em Botucatu é composta por profissionais altamente qualificados, com anos de experiência na indústria, garantindo que cada portão seja fabricado e instalado com precisão e atenção aos detalhes. Utilizamos apenas materiais de alta qualidade, assegurando que nossos portões ofereçam não apenas estética, mas também segurança e durabilidade.',
       },
     ],
   },
   {
     id: 11,
     title: 'Toldo de Policarbonato',
-    pageTitle: 'Toldo de Policarbonato em Bauru - SP Cobertura de Policarbonato',
-    slug: 'toldo-de-policarbonato-em-bauru-cobertura-de-policarbonato',
+    pageTitle: 'Toldo de Policarbonato em Botucatu - SP Cobertura de Policarbonato',
+    slug: 'toldo-de-policarbonato-em-botucatu-cobertura-de-policarbonato',
     image: 'toldo-em-policarbonato',
-    alt: 'Toldo de policarbonato em Bauru SP - Cobertura',
-    metaDescription: 'Toldo de policarbonato em Bauru SP. Fabricação e instalação de coberturas de policarbonato. Proteção UV e durabilidade. Orçamento grátis!',
+    alt: 'Toldo de policarbonato em Botucatu SP - Cobertura',
+    metaDescription: 'Toldo de policarbonato em Botucatu SP. Fabricação e instalação de coberturas de policarbonato. Proteção UV e durabilidade. Orçamento grátis!',
     intro: 'Os toldos de policarbonato são conhecidos por sua durabilidade e resistência, sendo capazes de suportar diversas condições climáticas. Além disso, eles oferecem proteção contra os raios UV, ajudando a preservar móveis e ambientes internos dos danos causados pelo sol.',
     sections: [
       {
@@ -325,11 +325,11 @@ export const services: Service[] = [
   {
     id: 12,
     title: 'Portão Pivotante',
-    pageTitle: 'Portão Pivotante em Bauru - SP',
-    slug: 'portao-pivotante-em-bauru',
+    pageTitle: 'Portão Pivotante em Botucatu - SP',
+    slug: 'portao-pivotante-em-botucatu',
     image: 'portoes-pivotante',
-    alt: 'Portão pivotante em Bauru SP - Serralheria',
-    metaDescription: 'Portão pivotante em Bauru SP. Fabricação e instalação de portões pivotantes modernos. Elegância e segurança. Orçamento gratuito!',
+    alt: 'Portão pivotante em Botucatu SP - Serralheria',
+    metaDescription: 'Portão pivotante em Botucatu SP. Fabricação e instalação de portões pivotantes modernos. Elegância e segurança. Orçamento gratuito!',
     intro: 'Os portões pivotantes são conhecidos por sua elegância e capacidade de transformar a entrada de qualquer imóvel. Eles são projetados para abrir lateralmente, proporcionando uma abertura ampla e um visual imponente. Este tipo de portão é ideal para áreas que demandam estilo e presença, além de serem extremamente versáteis em termos de design.',
     sections: [
       {
@@ -353,11 +353,11 @@ export const services: Service[] = [
   {
     id: 13,
     title: 'Fabricação de Deck',
-    pageTitle: 'Fabricação de Decks e Decks para Piscina em Bauru',
-    slug: 'fabricacao-de-decks-e-decks-para-piscina-em-bauru',
+    pageTitle: 'Fabricação de Decks e Decks para Piscina em Botucatu',
+    slug: 'fabricacao-de-decks-e-decks-para-piscina-em-botucatu',
     image: 'manutencao-de-piscina',
-    alt: 'Fabricação de deck e deck para piscina em Bauru SP',
-    metaDescription: 'Fabricação de decks e decks para piscina em Bauru. Madeira e materiais compactos. Transforme sua área externa. Orçamento gratuito!',
+    alt: 'Fabricação de deck e deck para piscina em Botucatu SP',
+    metaDescription: 'Fabricação de decks e decks para piscina em Botucatu. Madeira e materiais compactos. Transforme sua área externa. Orçamento gratuito!',
     intro: 'Os decks são conhecidos por sua capacidade de transformar qualquer área externa, tornando-a mais acessível e agradável. Seja em um jardim ou ao redor da piscina, eles oferecem um espaço confortável para descanso e convivência.',
     sections: [
       {

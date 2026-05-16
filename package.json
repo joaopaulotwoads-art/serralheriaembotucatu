@@ -1,8 +1,9 @@
 {
-  "name": "serralheria-bauru",
+  "name": "serralheria-botucatu",
   "type": "module",
   "version": "1.0.0",
   "scripts": {
+    "sync:obra-fotos": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/sync-obra-fotos.ps1",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",

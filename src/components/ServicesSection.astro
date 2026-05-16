@@ -6,20 +6,28 @@ import { services } from '../data/services';
 const images = import.meta.glob<{ default: ImageMetadata }>('../assets/images/*.png');
 ---
 
-<section id="servicos" class="py-20 lg:py-28 bg-gray-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section id="servicos" class="relative py-20 lg:py-28 overflow-hidden">
+  <div class="absolute inset-0 metal-texture opacity-40 pointer-events-none" aria-hidden="true"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-zinc-100/80 via-zinc-50 to-white pointer-events-none" aria-hidden="true"></div>
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Section Header -->
-    <div class="text-center mb-16">
-      <span class="inline-block px-4 py-1.5 bg-brand-100 text-brand-700 text-sm font-semibold rounded-full mb-4">
-        Nossos Serviços
+    <div class="text-center mb-16 max-w-3xl mx-auto">
+      <span
+        class="eyebrow inline-block px-4 py-2 bg-brand-100/90 text-brand-800 rounded-sm mb-5 ring-1 ring-brand-200/80 shadow-sm"
+      >
+        Nossos serviços
       </span>
-      <h2 class="section-title mb-4">
-        SERVIÇOS E PRODUTOS — SERRALHERIA
+      <h2 class="section-title mb-5">
+        Serviços e produtos
       </h2>
-      <p class="text-gray-500 max-w-2xl mx-auto text-lg">
-        Oferecemos uma linha completa de serviços em serralheria para residências e comércios em Bauru e região.
+      <p class="text-zinc-600 max-w-2xl mx-auto text-lg leading-relaxed">
+        Oferecemos uma linha completa de serviços em serralheria para residências e comércios em Botucatu e região.
       </p>
-      <div class="w-24 h-1.5 bg-gradient-to-r from-brand-500 to-brand-700 mx-auto mt-6 rounded-full"></div>
+      <div class="flex justify-center gap-1.5 mt-8" aria-hidden="true">
+        <span class="h-1 w-10 rounded-full bg-gradient-to-r from-spark-500 to-brand-600"></span>
+        <span class="h-1 w-3 rounded-full bg-brand-400/50"></span>
+        <span class="h-1 w-3 rounded-full bg-brand-300/40"></span>
+      </div>
     </div>
 
     <!-- Services Grid -->

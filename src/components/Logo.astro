@@ -1,0 +1,51 @@
+---
+interface Props {
+  /** Header (default) uses larger mark; footer uses compact */
+  variant?: 'header' | 'footer';
+  class?: string;
+}
+
+const { variant = 'header', class: className = '' } = Astro.props;
+const compact = variant === 'footer';
+---
+
+<div class:list={['flex items-center gap-3 select-none', className]}>
+  <svg
+    class:list={[compact ? 'h-8 w-8 sm:h-9 sm:w-9' : 'h-10 w-10 sm:h-11 sm:w-11', 'shrink-0']}
+    viewBox="0 0 48 48"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    <defs>
+      <linearGradient id="logo-face" x1="8" y1="6" x2="44" y2="46" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#f59e0b" />
+        <stop offset="1" stop-color="#9a3412" />
+      </linearGradient>
+    </defs>
+    <rect width="48" height="48" rx="14" fill="url(#logo-face)" />
+    <path
+      d="M24 10l3 14 11 4-11 4-3 14-3-14-11-4 11-4 3-14z"
+      fill="white"
+      fill-opacity="0.95"
+    />
+  </svg>
+  <div class="flex flex-col leading-none">
+    <span
+      class:list={[
+        'font-display font-bold uppercase tracking-caps text-zinc-500',
+        compact ? 'text-[9px] sm:text-[10px]' : 'text-[10px] sm:text-[11px]',
+      ]}
+    >
+      Serralheria
+    </span>
+    <span
+      class:list={[
+        'font-display font-bold text-white tracking-tight',
+        compact ? 'text-base sm:text-lg mt-0.5' : 'text-lg sm:text-xl mt-1',
+      ]}
+    >
+      Botucatu
+    </span>
+  </div>
+</div>
