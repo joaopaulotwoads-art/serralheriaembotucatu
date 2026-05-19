@@ -14,30 +14,28 @@ interface Props {
   index?: number;
 }
 
-const { title, slug, imageSrc, alt, categoryLabel, categoryFilter, intro, featured = false, gridClass = '', index = 0 } = Astro.props;
-
-const excerpt = intro.length > 140 ? `${intro.slice(0, 137).trim()}…` : intro;
+const { title, slug, imageSrc, alt, categoryLabel, categoryFilter, featured = false, gridClass = '', index = 0 } = Astro.props;
 ---
 
 <a
   href={`/${slug}/`}
   class:list={[
-    'service-card group h-full min-h-[220px]',
+    'service-card group flex flex-col bg-white',
     gridClass,
-    featured && 'min-h-[320px] lg:min-h-full',
   ]}
   data-category={categoryFilter}
   data-service-card
   aria-label={`${title} — ${categoryLabel}`}
   style={`animation-delay: ${index * 0.06}s`}
 >
-  <div class="relative h-full w-full overflow-hidden">
+  <!-- Imagem no topo -->
+  <div class="relative overflow-hidden flex-shrink-0">
     <Image
       src={imageSrc}
       alt={alt}
       class:list={[
-        'h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105',
-        featured ? 'min-h-[280px] lg:min-h-[420px]' : 'min-h-[200px] aspect-[4/3] lg:aspect-auto lg:min-h-[220px]',
+        'w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105',
+        featured ? 'aspect-[16/9] lg:aspect-[4/3]' : 'aspect-[4/3]',
       ]}
       widths={featured ? [480, 640, 800, 960] : [320, 480, 640]}
       sizes={featured ? '(max-width: 1024px) 100vw, 50vw' : '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw'}
@@ -45,44 +43,26 @@ const excerpt = intro.length > 140 ? `${intro.slice(0, 137).trim()}…` : intro;
       format="webp"
       quality={75}
     />
+  </div>
 
-    <div
-      class="pointer-events-none absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/40 to-transparent opacity-90"
-      aria-hidden="true"
-    ></div>
-
-    <div
-      class="pointer-events-none absolute inset-0 flex flex-col justify-end bg-zinc-900/85 p-5 opacity-0 transition-opacity duration-300 group-hover:opacity-100 sm:p-6"
-      aria-hidden="true"
+  <!-- Título e categoria ABAIXO da imagem -->
+  <div class="p-4 sm:p-5">
+    <span class="font-display mb-2 block text-xs uppercase tracking-[0.16em] text-spark-600">
+      {categoryLabel}
+    </span>
+    <h2
+      class:list={[
+        'font-display uppercase leading-[0.95] tracking-wide text-[#1a1a1a] transition-colors group-hover:text-spark-600',
+        featured ? 'text-2xl sm:text-3xl' : 'text-xl sm:text-2xl',
+      ]}
     >
-      <p class="text-sm leading-relaxed text-zinc-300 line-clamp-4">{excerpt}</p>
-      <span class="mt-4 inline-flex items-center gap-2 font-display text-sm uppercase tracking-[0.14em] text-spark-300">
-        Ver serviço
-        <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-        </svg>
-      </span>
-    </div>
-
-    <div class="absolute inset-x-0 bottom-0 z-10 p-4 sm:p-5">
-      <span
-        class="mb-2 inline-block border border-spark-500/30 bg-zinc-900/80 px-2.5 py-1 font-display text-xs uppercase tracking-[0.16em] text-spark-300 backdrop-blur-sm"
-      >
-        {categoryLabel}
-      </span>
-      <h2
-        class:list={[
-          'font-display uppercase leading-[0.95] tracking-wide text-white transition-colors group-hover:text-spark-200',
-          featured ? 'text-3xl sm:text-4xl lg:text-5xl' : 'text-2xl sm:text-3xl',
-        ]}
-      >
-        {title}
-      </h2>
-    </div>
-
-    <div
-      class="pointer-events-none absolute inset-0 rounded-sm opacity-0 ring-1 ring-inset ring-zinc-300/20 transition-opacity duration-300 group-hover:opacity-100"
-      aria-hidden="true"
-    />
+      {title}
+    </h2>
+    <span class="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-spark-600">
+      Ver serviço
+      <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+      </svg>
+    </span>
   </div>
 </a>
