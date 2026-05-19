@@ -3,13 +3,13 @@ import { Image } from 'astro:assets';
 import aboutImg from '../assets/images/severino-oficina-1.png';
 ---
 
-<section id="sobre" class="relative overflow-hidden bg-zinc-900 pb-20 pt-10 lg:pb-28 lg:pt-14">
-  <div class="pointer-events-none absolute -left-32 top-1/4 h-64 w-64 rounded-full bg-spark-500/5 blur-3xl" aria-hidden="true"></div>
+<section id="sobre" class="relative overflow-hidden bg-white pb-20 pt-10 lg:pb-28 lg:pt-14">
+  <div class="pointer-events-none absolute -left-32 top-1/4 h-64 w-64 rounded-full bg-spark-500/8 blur-3xl" aria-hidden="true"></div>
 
   <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-10">
       <div class="relative order-1 lg:col-span-5 lg:col-start-8 lg:row-span-2">
-        <div class="relative overflow-hidden rounded-sm ring-1 ring-white/10 shadow-industrial">
+        <div class="relative overflow-hidden rounded-sm ring-1 ring-zinc-200 shadow-lg">
           <Image
             src={aboutImg}
             alt="Obras de serralheria em Botucatu SP — instalação de estruturas metálicas"
@@ -20,7 +20,6 @@ import aboutImg from '../assets/images/severino-oficina-1.png';
             format="webp"
             quality={80}
           />
-          <div class="absolute inset-0 bg-gradient-to-t from-zinc-900/80 via-transparent to-transparent"></div>
         </div>
       </div>
 
@@ -28,11 +27,11 @@ import aboutImg from '../assets/images/severino-oficina-1.png';
         <span class="eyebrow mb-4 inline-block border border-spark-500/25 bg-spark-500/10 px-4 py-2">
           Quem somos
         </span>
-        <h2 class="font-display text-4xl uppercase leading-none tracking-wide text-white md:text-5xl lg:text-6xl">
-          Sobre <span class="text-spark-400">Serralheria Botucatu</span>
+        <h2 class="font-display text-4xl uppercase leading-none tracking-wide text-zinc-900 md:text-5xl lg:text-6xl">
+          Sobre <span class="text-spark-500">Serralheria Botucatu</span>
         </h2>
 
-        <div class="mt-8 space-y-4 text-lg leading-relaxed text-zinc-400">
+        <div class="mt-8 space-y-4 text-lg leading-relaxed text-zinc-600">
           <p>
             Com mais de 15 anos de experiência no mercado, nossa serralheria em Botucatu possui todo o conhecimento
             e mão de obra qualificada que sua obra necessita.
@@ -42,7 +41,7 @@ import aboutImg from '../assets/images/severino-oficina-1.png';
           </p>
           <p>
             Atendemos projetos de edifícios, imóveis privados, áreas comuns, projetos públicos e hotéis.
-            Seja para <strong class="text-zinc-200">fabricação, reforma ou manutenção</strong>,
+            Seja para <strong class="text-zinc-900">fabricação, reforma ou manutenção</strong>,
             você pode contar com nossa equipe.
           </p>
         </div>
@@ -50,32 +49,32 @@ import aboutImg from '../assets/images/severino-oficina-1.png';
 
       <div class="order-3 lg:col-span-7 lg:col-start-1 lg:row-start-2">
         <div
-          class="mt-6 flex flex-col divide-y divide-white/[0.08] border border-white/[0.08] bg-zinc-900/60 sm:flex-row sm:divide-x sm:divide-y-0"
+          class="mt-6 flex flex-col divide-y divide-zinc-200 border border-zinc-200 bg-zinc-50 sm:flex-row sm:divide-x sm:divide-y-0"
           role="list"
         >
           <div class="flex flex-1 items-center gap-4 px-5 py-4 sm:justify-center sm:gap-3 sm:py-5" role="listitem">
-            <p class="font-display shrink-0 text-4xl leading-none text-spark-400">15+</p>
+            <p class="font-display shrink-0 text-4xl leading-none text-spark-500">15+</p>
             <p class="text-xs font-medium uppercase leading-snug tracking-wider text-zinc-500">Anos de experiência</p>
           </div>
           <div class="flex flex-1 items-center gap-4 px-5 py-4 sm:justify-center sm:gap-3 sm:py-5" role="listitem">
-            <p class="font-display shrink-0 text-4xl leading-none text-zinc-100">500+</p>
+            <p class="font-display shrink-0 text-4xl leading-none text-zinc-900">500+</p>
             <p class="text-xs font-medium uppercase leading-snug tracking-wider text-zinc-500">Projetos concluídos</p>
           </div>
           <div class="flex flex-1 items-center gap-4 px-5 py-4 sm:justify-center sm:gap-3 sm:py-5" role="listitem">
-            <p class="font-display shrink-0 text-4xl leading-none text-zinc-100">12+</p>
+            <p class="font-display shrink-0 text-4xl leading-none text-zinc-900">12+</p>
             <p class="text-xs font-medium uppercase leading-snug tracking-wider text-zinc-500">Cidades atendidas</p>
           </div>
         </div>
 
-        <blockquote class="relative mt-8 border-l-2 border-spark-500/60 bg-zinc-900/50 py-5 pl-6 pr-4">
-          <svg class="absolute -top-2 left-4 h-8 w-8 text-spark-500/20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <blockquote class="relative mt-8 border-l-2 border-spark-500/60 bg-zinc-50 py-5 pl-6 pr-4">
+          <svg class="absolute -top-2 left-4 h-8 w-8 text-spark-500/15" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.996 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10H0z" />
           </svg>
-          <p class="relative text-base italic leading-relaxed text-zinc-300">
-            “Fizeram o portão da garagem no prazo combinado. Acabamento firme e equipe educada do começo ao fim.”
+          <p class="relative text-base italic leading-relaxed text-zinc-600">
+            "Fizeram o portão da garagem no prazo combinado. Acabamento firme e equipe educada do começo ao fim."
           </p>
           <footer class="mt-4 text-sm text-zinc-500">
-            — Cliente residencial, Botucatu <span class="text-zinc-600">(depoimento ilustrativo)</span>
+            — Cliente residencial, Botucatu <span class="text-zinc-400">(depoimento ilustrativo)</span>
           </footer>
         </blockquote>
       </div>
