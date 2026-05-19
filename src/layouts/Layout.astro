@@ -74,13 +74,14 @@ const jsonLd = {
     <meta name="generator" content={Astro.generator} />
 
     <!-- Fallback inline: garante cores visíveis mesmo sem CSS externo (Googlebot) -->
-    <style>
-      body { background-color: #111111 !important; }
+    <style is:inline>
+      body { background-color: #18181b !important; color: #ffffff !important; }
+      header { background-color: #18181b !important; }
       #hero { background-color: #3f3f46 !important; }
-      #servicos { background-color: #1c1c1e !important; }
-      #sobre { background-color: #111111 !important; }
+      #servicos { background-color: #18181b !important; }
+      #sobre { background-color: #18181b !important; }
       #contato { background-color: #111111 !important; }
-      footer { background-color: #111111 !important; }
+      footer, #localizacao { background-color: #111111 !important; }
       h1, h2, h3, p, li, a, span { color: #ffffff !important; }
     </style>
 

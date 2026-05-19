@@ -29,14 +29,14 @@
 
 @layer components {
   .btn-primary {
-    @apply font-display uppercase tracking-[0.12em] text-base inline-flex items-center gap-2.5 px-8 py-4 bg-spark-600 text-steel-925 font-normal rounded-sm
-           shadow-industrial-sm hover:bg-spark-500 hover:shadow-spark focus:outline-none focus:ring-2 focus:ring-spark-400/50 focus:ring-offset-2 focus:ring-offset-steel-925
+    @apply font-display uppercase tracking-[0.12em] text-base inline-flex items-center gap-2.5 px-8 py-4 bg-spark-600 text-zinc-950 font-normal rounded-sm
+           shadow-industrial-sm hover:bg-spark-500 hover:shadow-spark focus:outline-none focus:ring-2 focus:ring-spark-400/50 focus:ring-offset-2 focus:ring-offset-zinc-950
            transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0;
   }
 
   .btn-outline {
     @apply font-display uppercase tracking-[0.12em] text-base inline-flex items-center gap-2 px-6 py-3 border border-zinc-400/60 text-zinc-100 font-normal rounded-sm
-           hover:bg-zinc-100 hover:text-steel-925 focus:outline-none focus:ring-2 focus:ring-zinc-400/40
+           hover:bg-zinc-100 hover:text-zinc-950 focus:outline-none focus:ring-2 focus:ring-zinc-400/40
            transition-all duration-300;
   }
 
@@ -47,7 +47,7 @@
 
   .btn-submit {
     @apply font-display w-full sm:w-auto uppercase tracking-[0.14em] text-lg inline-flex items-center justify-center gap-2.5 px-12 py-4
-           bg-spark-500 text-steel-925 rounded-sm shadow-spark ring-2 ring-spark-400/40 ring-offset-2 ring-offset-contact
+           bg-spark-500 text-zinc-950 rounded-sm shadow-spark ring-2 ring-spark-400/40 ring-offset-2 ring-offset-contact
            hover:bg-spark-400 hover:shadow-[0_0_40px_-4px_rgba(184,134,11,0.55)] focus:outline-none focus:ring-spark-300/60
            transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0;
   }
@@ -120,7 +120,7 @@
   }
 
   .service-card {
-    @apply relative block overflow-hidden rounded-sm bg-steel-850 ring-1 ring-white/[0.06]
+    @apply relative block overflow-hidden rounded-sm bg-zinc-900 ring-1 ring-white/[0.06]
            transition-all duration-500 hover:ring-spark-500/35 hover:shadow-spark;
   }
 
@@ -141,7 +141,7 @@
 
 .skip-link {
   @apply sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100]
-         focus:px-4 focus:py-2 focus:bg-spark-600 focus:text-steel-925 focus:rounded-sm focus:font-display focus:uppercase focus:tracking-wider focus:text-sm;
+         focus:px-4 focus:py-2 focus:bg-spark-600 focus:text-zinc-950 focus:rounded-sm focus:font-display focus:uppercase focus:tracking-wider focus:text-sm;
 }
 
 /* Animações sem opacity:0 — conteúdo visível para crawlers (GSC) e SSR/SSG */
@@ -206,7 +206,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-steel-850;
+  @apply bg-zinc-900;
 }
 
 ::-webkit-scrollbar-thumb {
