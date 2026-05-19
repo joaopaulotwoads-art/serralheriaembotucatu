@@ -21,6 +21,11 @@
   }
 }
 
+/* Fallback visível para crawlers quando a imagem do hero não carrega */
+#hero {
+  background-color: #3f3f46;
+}
+
 @layer components {
   .btn-primary {
     @apply font-display uppercase tracking-[0.12em] text-base inline-flex items-center gap-2.5 px-8 py-4 bg-spark-600 text-steel-925 font-normal rounded-sm
