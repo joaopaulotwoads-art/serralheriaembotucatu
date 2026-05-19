@@ -73,6 +73,17 @@ const jsonLd = {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
 
+    <!-- Fallback inline: garante cores visíveis mesmo sem CSS externo (Googlebot) -->
+    <style>
+      body { background-color: #111111 !important; }
+      #hero { background-color: #3f3f46 !important; }
+      #servicos { background-color: #1c1c1e !important; }
+      #sobre { background-color: #111111 !important; }
+      #contato { background-color: #111111 !important; }
+      footer { background-color: #111111 !important; }
+      h1, h2, h3, p, li, a, span { color: #ffffff !important; }
+    </style>
+
     <!-- SEO -->
     <title>{title}</title>
     <meta name="description" content={description} />
