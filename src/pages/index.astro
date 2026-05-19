@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
+import SectionDivider from '../components/SectionDivider.astro';
 import ServicesSection from '../components/ServicesSection.astro';
 import AboutSection from '../components/AboutSection.astro';
 import ContactForm from '../components/ContactForm.astro';
@@ -14,8 +15,11 @@ import '../styles/global.css';
   <Header />
   <main id="main-content">
     <Hero />
+    <SectionDivider class="py-6" />
     <ServicesSection />
+    <SectionDivider class="py-6" />
     <AboutSection />
+    <SectionDivider class="py-6" />
     <ContactForm />
   </main>
   <Footer />
