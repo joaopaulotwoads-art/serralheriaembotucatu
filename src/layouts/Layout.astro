@@ -30,7 +30,7 @@ const jsonLd = {
   description:
     'Serralheria em Botucatu SP - Fabricação e instalação de portões, grades, coberturas metálicas, pergolados e estruturas metálicas.',
   url: 'https://serralheriaembotucatu.com.br',
-  telephone: '+55-14-98165-1674',
+  telephone: '+55-14-99698-0785',
   email: 'contato@serralheriaembotucatu.com.br',
   address: {
     '@type': 'PostalAddress',
@@ -42,9 +42,17 @@ const jsonLd = {
   hasMap: SITE_MAPS_URL,
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
-    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-    opens: '08:00',
-    closes: '18:00',
+    dayOfWeek: [
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+      'Sunday',
+    ],
+    opens: '00:00',
+    closes: '23:59',
   },
   priceRange: '$$',
   image: absoluteOgImage,
