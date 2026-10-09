@@ -122,6 +122,10 @@ const jsonLd = {
           botao: a.id || a.innerText.trim().slice(0, 40),
           pagina: location.pathname
         });
+        if (window.smartlook) smartlook('track', 'whatsapp_click', {
+          lead_code: code,
+          botao: a.id || a.innerText.trim().slice(0, 40)
+        });
       });
     </script>
 
