@@ -93,6 +93,16 @@ const jsonLd = {
 
           gtag('config', 'G-K5M4J8KTFF');
         </script>
+
+        <!-- Smartlook -->
+        <script is:inline>
+          window.smartlook||(function(d) {
+            var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+            var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+            c.charset='utf-8';c.src='https://web-sdk.smartlook.com/recorder.js';h.appendChild(c);
+            })(document);
+            smartlook('init', 'ca7dee2204b060448553cdec356c1eb9bc193aef', { region: 'eu' });
+        </script>
       </>
     )}
 
@@ -126,6 +136,8 @@ const jsonLd = {
       footer, #localizacao { background-color: #18181b !important; }
       h1, h2, h3, p, li, a, span { color: #1a1a1a !important; }
       footer h1, footer h2, footer h3, footer p, footer li, footer a, footer span { color: #ffffff !important; }
+      .on-dark, .on-dark h1, .on-dark h2, .on-dark h3, .on-dark p, .on-dark li, .on-dark a, .on-dark span { color: #ffffff !important; }
+      .on-dark-text h1, .on-dark-text h2, .on-dark-text h3, .on-dark-text p { color: #ffffff !important; }
     </style>
 
     <!-- SEO -->
