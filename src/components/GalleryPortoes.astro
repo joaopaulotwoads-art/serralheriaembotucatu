@@ -11,7 +11,7 @@ const items = Object.entries(modules)
   .sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }))
   .map(([path, mod], index) => ({
     src: mod.default,
-    alt: `Portão e serralheria em metal — modelo ${index + 1}, trabalho realizado em Botucatu`,
+    alt: `Trabalho realizado pela NK Serralheria em Botucatu — foto ${index + 1}`,
   }));
 
 const total = items.length;
@@ -29,7 +29,7 @@ const total = items.length;
         Portfólio
       </span>
       <h2 id="galeria-portoes-heading" class="font-display text-2xl sm:text-3xl font-bold text-zinc-900 tracking-display-tight uppercase mb-3">
-        Modelos de portão
+        Nosso trabalho
       </h2>
       <p class="text-zinc-600 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
         Fotos reais do nosso trabalho — arraste ou use as setas para ver mais.
