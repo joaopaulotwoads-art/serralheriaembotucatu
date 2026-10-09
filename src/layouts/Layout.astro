@@ -30,8 +30,9 @@ const jsonLd = {
   description:
     'Serralheria em Botucatu SP - Fabricação e instalação de portões, grades, coberturas metálicas, pergolados e estruturas metálicas.',
   url: 'https://serralheriaembotucatu.com.br',
-  telephone: '+55-14-99698-0785',
+  telephone: '+55-14-99136-2987',
   email: 'contato@serralheriaembotucatu.com.br',
+  taxID: '67176250000158',
   address: {
     '@type': 'PostalAddress',
     streetAddress: SITE_STREET,
@@ -80,6 +81,39 @@ const jsonLd = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
+
+    {import.meta.env.PROD && (
+      <>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-K5M4J8KTFF"></script>
+        <script is:inline>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-K5M4J8KTFF');
+        </script>
+      </>
+    )}
+
+    <!-- Rastreamento de cliques no WhatsApp -->
+    <script is:inline>
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest('a[href*="wa.me"]');
+        if (!a) return;
+        var code = 'NK-' + Date.now().toString(36).slice(-4).toUpperCase()
+                 + Math.random().toString(36).slice(2, 4).toUpperCase();
+        var url = new URL(a.href);
+        var base = (url.searchParams.get('text') || '').replace(/\n*Código: #NK-\w+$/, '');
+        url.searchParams.set('text', base + '\n\nCódigo: #' + code);
+        a.href = url.toString();
+        if (window.gtag) gtag('event', 'whatsapp_click', {
+          lead_code: code,
+          botao: a.id || a.innerText.trim().slice(0, 40),
+          pagina: location.pathname
+        });
+      });
+    </script>
 
     <!-- Fallback inline: garante cores visíveis mesmo sem CSS externo (Googlebot) -->
     <style is:inline>
