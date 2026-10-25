@@ -94,38 +94,36 @@ const jsonLd = {
           gtag('config', 'G-K5M4J8KTFF');
         </script>
 
-        <!-- Smartlook -->
-        <script is:inline>
-          window.smartlook||(function(d) {
-            var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
-            var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
-            c.charset='utf-8';c.src='https://web-sdk.smartlook.com/recorder.js';h.appendChild(c);
-            })(document);
-            smartlook('init', 'ca7dee2204b060448553cdec356c1eb9bc193aef', { region: 'eu' });
+        <!-- Microsoft Clarity -->
+        <script is:inline type="text/javascript">
+          (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "z3fqay8bgn");
         </script>
       </>
     )}
 
-    <!-- Rastreamento de cliques no WhatsApp -->
+    <!-- Rastreamento de cliques no WhatsApp e telefone -->
     <script is:inline>
       document.addEventListener('click', function (e) {
-        var a = e.target.closest('a[href*="wa.me"]');
+        var a = e.target.closest('a[href*="wa.me"], a[href^="tel:"]');
         if (!a) return;
+        var botao = a.id || a.getAttribute('aria-label') || a.innerText.trim().slice(0, 40);
+        if (a.href.indexOf('tel:') === 0) {
+          if (window.gtag) gtag('event', 'phone_click', { botao: botao, pagina: location.pathname });
+          if (window.clarity) clarity('event', 'phone_click');
+          return;
+        }
         var code = 'NK-' + Date.now().toString(36).slice(-4).toUpperCase()
                  + Math.random().toString(36).slice(2, 4).toUpperCase();
         var url = new URL(a.href);
         var base = (url.searchParams.get('text') || '').replace(/\n*Código: #NK-\w+$/, '');
         url.searchParams.set('text', base + '\n\nCódigo: #' + code);
         a.href = url.toString();
-        if (window.gtag) gtag('event', 'whatsapp_click', {
-          lead_code: code,
-          botao: a.id || a.innerText.trim().slice(0, 40),
-          pagina: location.pathname
-        });
-        if (window.smartlook) smartlook('track', 'whatsapp_click', {
-          lead_code: code,
-          botao: a.id || a.innerText.trim().slice(0, 40)
-        });
+        if (window.gtag) gtag('event', 'whatsapp_click', { lead_code: code, botao: botao, pagina: location.pathname });
+        if (window.clarity) { clarity('set', 'lead_code', code); clarity('event', 'whatsapp_click'); }
       });
     </script>
 
